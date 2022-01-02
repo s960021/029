@@ -8,31 +8,7 @@ import json
 my_path=os.getcwd()
 img=cv2.imread("D://code//Project//OpenCV//image//540.jpg")
 img_shape = img.shape
-# # print(img_shape)
-# dh = img_shape[0]
-# dw = img_shape[1]
-# # 取得xywh
-# with open('D://code//Project//rtsp_yolov4_detect//static//result.json', newline='' ) as jsonfile:
-#     data=json.load(jsonfile)
-#     data1= data[0]
-#     data2=data1.get('objects')
-#     data3=data2[0]
-#     data4=data3.get('relative_coordinates')
-#     x=data4.get('center_x')
-#     y=data4.get('center_y')
-#     w=data4.get('width')
-#     h=data4.get('height')
-#     l = int((x - w / 2) * dw)
-#     r = int((x + w / 2) * dw)
-#     t = int((y - h / 2) * dh)
-#     b = int((y + h / 2) * dh)
 
-    # img=cv2.rectangle(img, (0, 0, 255), 10)
-# plt.imshow(img,"gray")
-# plt.show()
-# img= img[t:b, l:r]
-# plt.imshow(img,"gray")
-# plt.show()
 alpha =1.7
 beta=0
 m1 = cv2.convertScaleAbs(img,alpha=alpha,beta=beta)
